@@ -829,6 +829,11 @@ export default function Home() {
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
             <p>&copy; 2024 {branch.name}. All rights reserved.</p>
+            <div className="mt-4 space-x-4">
+              <a href="/privacy-policy" className="hover:text-white transition">Privacy Policy</a>
+              <span>|</span>
+              <a href="/terms" className="hover:text-white transition">Terms & Conditions</a>
+            </div>
           </div>
         </div>
       </footer>

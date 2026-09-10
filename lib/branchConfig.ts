@@ -81,10 +81,10 @@ export const branches: Record<string, BranchConfig> = {
       hoursDisplay: "9:00 AM - 8:00 PM",
       hoursBadge: "OPEN 9AM - 8PM",
       address: [
-        "Koh Sirey, Rasada Subdistrict",
-        "Mueang Phuket District, Phuket 83000"
+        "1, 56 Soi Honsatihong, Talat Yai",
+        "Mueang, Phuket 83000"
       ],
-      addressFull: "(PMC Sirey) Phuket Medical Clinic - ภูเก็ต เมดิคอล คลินิก เกาะสิเหร่",
+      addressFull: "(PMC Sirey) Phuket Medical Clinic - 1, 56 Soi Honsatihong, Talat Yai, Mueang, Phuket 83000",
       mapUrl: "https://maps.app.goo.gl/UmyUh9pUhqLnADdm9",
     },
   };
