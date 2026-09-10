@@ -77,14 +77,14 @@ export const branches: Record<string, BranchConfig> = {
       phoneHref: "tel:+66969292449",
       whatsapp: "66969292449",
       line: "@pmcphuket",
-      hours: "09:00-22:00",
-      hoursDisplay: "9:00 AM - 10:00 PM",
-      hoursBadge: "OPEN 9AM - 10PM",
+      hours: "09:00-20:00",
+      hoursDisplay: "9:00 AM - 8:00 PM",
+      hoursBadge: "OPEN 9AM - 8PM",
       address: [
         "Koh Sirey, Rasada Subdistrict",
         "Mueang Phuket District, Phuket 83000"
       ],
-      addressFull: "Phuket Medical Clinic Koh Sirey - ภูเก็ต เมดิคอล คลินิก เกาะสิเหร่",
+      addressFull: "(PMC Sirey) Phuket Medical Clinic - ภูเก็ต เมดิคอล คลินิก เกาะสิเหร่",
       mapUrl: "https://maps.app.goo.gl/UmyUh9pUhqLnADdm9",
     },
   };
