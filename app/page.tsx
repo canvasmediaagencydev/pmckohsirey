@@ -122,7 +122,7 @@ export default function Home() {
             <div className="flex items-center">
               <Image
                 src="/phuket-medical-clinic-1-1024x228.webp"
-                alt="Phuket Medical Clinic Laguna"
+                alt="Phuket Medical Clinic Koh Sirey"
                 width={200}
                 height={44}
                 className="h-10 w-auto"
@@ -285,7 +285,7 @@ export default function Home() {
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Phuket Medical Clinic
-              <span className="block mt-2 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Laguna</span>
+              <span className="block mt-2 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Koh Sirey</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Your trusted healthcare partner in paradise, delivering world-class medical services with compassion and excellence.
@@ -302,7 +302,7 @@ export default function Home() {
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Excellence in Healthcare</h3>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                  Located in the heart of Laguna, Phuket, we are committed to delivering comprehensive and high-standard medical services with modern medical equipment and the latest technology.
+                  Located in the heart of Koh Sirey, Phuket, we are committed to delivering comprehensive and high-standard medical services with modern medical equipment and the latest technology.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Our experienced and skilled medical team provides care in a relaxing and friendly atmosphere, building trust and satisfaction for all our patients.
@@ -499,7 +499,7 @@ export default function Home() {
               {
                 name: "Tuk Nussana",
                 time: "11 months ago",
-                review: "Impressed by PMC Laguna! Excellent service, professional staff, and fast, efficient care. Clean and modern—highly recommended!",
+                review: "Impressed by PMC Koh Sirey! Excellent service, professional staff, and fast, efficient care. Clean and modern—highly recommended!",
                 rating: 5
               },
               {

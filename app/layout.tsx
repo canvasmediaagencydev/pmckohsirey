@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Phuket Medical Clinic Laguna - Your Trusted Healthcare Partner",
-  description: "Comprehensive and high-standard medical services in Laguna, Phuket. Modern equipment, experienced medical team, open daily 9 AM - 10 PM. Disease screening, health check-ups, vaccinations, beauty services and more.",
+  title: "Phuket Medical Clinic Koh Sirey - Your Trusted Healthcare Partner",
+  description: "Comprehensive and high-standard medical services in Koh Sirey, Phuket. Modern equipment, experienced medical team, open daily 9 AM - 10 PM. Disease screening, health check-ups, vaccinations, beauty services and more.",
 };
 
 const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;

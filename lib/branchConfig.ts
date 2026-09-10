@@ -52,27 +52,45 @@ export const branches: Record<string, BranchConfig> = {
     mapUrl: "https://share.google/mxy7PwLaauoHoZ1yW",
   },
   "pmclagunaclinic.net": {
-    name: "PMC Laguna",
-    domain: "pmclagunaclinic.net",
-    phone: "+66962362449",
-    phoneDisplay: "096-236-2449",
-    phoneHref: "tel:+66962362449",
-    whatsapp: "66962362449",
-    line: "@pmclaguna",
-    hours: "09:00-22:00",
-    hoursDisplay: "9:00 AM - 10:00 PM",
-    hoursBadge: "OPEN 9AM - 10PM",
-    address: [
-      "58/1, Choeng Thale Subdistrict",
-      "Thalang District, Phuket 83100"
-    ],
-    addressFull: "Phuket Medical Clinic Laguna - ภูเก็ต เมดิคอล คลินิก ลากูน่า",
-    mapUrl: "https://maps.app.goo.gl/7PwP7N4AF3F2JHxL8",
-  },
-};
+      name: "PMC Laguna",
+      domain: "pmclagunaclinic.net",
+      phone: "+669****2449",
+      phoneDisplay: "096-236-2449",
+      phoneHref: "tel:+669****2449",
+      whatsapp: "66962362449",
+      line: "@pmclaguna",
+      hours: "09:00-22:00",
+      hoursDisplay: "9:00 AM - 10:00 PM",
+      hoursBadge: "OPEN 9AM - 10PM",
+      address: [
+        "58/1, Choeng Thale Subdistrict",
+        "Thalang District, Phuket 83100"
+      ],
+      addressFull: "Phuket Medical Clinic Laguna - ภูเก็ต เมดิคอล คลินิก ลากูน่า",
+      mapUrl: "https://maps.app.goo.gl/7PwP7N4AF3F2JHxL8",
+    },
+    "pmcsirey.net": {
+      name: "PMC Koh Sirey",
+      domain: "pmcsirey.net",
+      phone: "+669****2449",
+      phoneDisplay: "096-236-2449",
+      phoneHref: "tel:+669****2449",
+      whatsapp: "66962362449",
+      line: "@pmcsirey",
+      hours: "09:00-22:00",
+      hoursDisplay: "9:00 AM - 10:00 PM",
+      hoursBadge: "OPEN 9AM - 10PM",
+      address: [
+        "Koh Sirey, Rasada Subdistrict",
+        "Mueang Phuket District, Phuket 83000"
+      ],
+      addressFull: "Phuket Medical Clinic Koh Sirey - ภูเก็ต เมดิคอล คลินิก เกาะสิเหร่",
+      mapUrl: "https://maps.app.goo.gl/",
+    },
+  };
 
-// Default branch (fallback)
-export const defaultBranch = branches["pmclagunaclinic.net"];
+  // Default branch (fallback)
+  export const defaultBranch = branches["pmcsirey.net"];
 
 export function getBranchByDomain(hostname: string): BranchConfig {
   // Remove www. prefix if present
