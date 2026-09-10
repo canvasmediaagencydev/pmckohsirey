@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'pmclagunaclinic.com',
+        hostname: 'pmcsirey.net',
         pathname: '/wp-content/uploads/**',
       },
       {
