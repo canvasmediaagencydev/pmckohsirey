@@ -7,10 +7,11 @@ export function useBranch(): BranchConfig {
   const [branch, setBranch] = useState<BranchConfig>(defaultBranch);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const hostname = window.location.hostname;
-      setBranch(getBranchByDomain(hostname));
-    }
+    if (typeof window === "undefined") return;
+
+    const updateBranch = () => setBranch(getBranchByDomain(window.location.hostname));
+    const timer = window.setTimeout(updateBranch, 0);
+    return () => window.clearTimeout(timer);
   }, []);
 
   return branch;

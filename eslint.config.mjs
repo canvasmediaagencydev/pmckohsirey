@@ -12,6 +12,7 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "server.js", // CommonJS entry point retained for the existing runtime.
   ]),
 ]);
 
