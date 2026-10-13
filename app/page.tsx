@@ -15,6 +15,13 @@ function Icon({ children }: { children: React.ReactNode }) {
   );
 }
 
+function PlatformIcon({ kind }: { kind: "phone" | "line" | "whatsapp" | "map" }) {
+  if (kind === "phone") return <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.9} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>;
+  if (kind === "line") return <svg className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 11.1c0-4.2-4-7.6-8.9-7.6s-8.9 3.4-8.9 7.6 4 7.6 8.9 7.6c.7 0 1.4-.07 2.06-.2l3.72 2.03-.92-3.1c2.49-1.38 4.04-3.66 4.04-6.3Z" /><text x="4.55" y="13.35" fill="white" fontSize="5.2" fontWeight="800" fontFamily="Arial, sans-serif">LINE</text></svg>;
+  if (kind === "whatsapp") return <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M20.3 11.4a8.3 8.3 0 01-12.26 7.27L3.7 20.3l1.63-4.15a8.3 8.3 0 1114.97-4.75z" /><path strokeLinecap="round" strokeLinejoin="round" d="M9.2 7.8c.22-.5.45-.52.75-.5l.6.03c.2 0 .42.06.5.3l.72 1.7c.07.18.04.39-.08.54l-.38.5c-.14.15-.1.33 0 .48.4.7 1 1.35 1.73 1.75.14.08.3.1.43-.02l.55-.5c.16-.13.37-.16.55-.08l1.55.72c.24.1.3.3.27.52-.09.65-.47 1.2-1.03 1.43-.4.17-.9.22-1.45.1-1.03-.23-2.45-1.12-3.58-2.35-1.05-1.14-1.83-2.53-2-3.5-.1-.55-.02-1.07.18-1.48z" /></svg>;
+  return <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.8a6.2 6.2 0 00-6.2 6.2c0 4.55 6.2 12.2 6.2 12.2s6.2-7.65 6.2-12.2A6.2 6.2 0 0012 2.8Z" fill="#34A853" /><path d="M12 2.8v8.45l6.03 3.1A6.18 6.18 0 0012 2.8Z" fill="#4285F4" /><path d="M5.97 14.35 12 11.25v9.95s-4.6-5.67-6.03-6.85Z" fill="#FBBC04" /><circle cx="12" cy="9" r="2.55" fill="white" /></svg>;
+}
+
 export default function Home() {
   const branch = useBranch();
   const [locale, setLocale] = useState<LandingLocale>("th");
@@ -96,11 +103,11 @@ export default function Home() {
       <section className="-mt-7 relative z-10 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-3 rounded-3xl bg-white p-3 shadow-xl sm:grid-cols-4">
           {[
-            { label: copy.actions.call, href: branch.phoneHref, tone: "text-blue-700 bg-blue-50" },
-            { label: copy.actions.line, href: lineUrl, tone: "text-green-700 bg-green-50" },
-            { label: copy.actions.whatsapp, href: whatsappUrl, tone: "text-emerald-700 bg-emerald-50" },
-            { label: copy.actions.map, href: branch.mapUrl, tone: "text-cyan-700 bg-cyan-50" },
-          ].map((action) => <a key={action.label} href={action.href} target={action.href.startsWith("tel:") ? undefined : "_blank"} rel={action.href.startsWith("tel:") ? undefined : "noopener noreferrer"} className={`rounded-2xl px-3 py-5 text-center text-sm font-extrabold transition hover:brightness-95 ${action.tone}`}>{action.label}</a>)}
+            { kind: "phone" as const, label: copy.actions.call, href: branch.phoneHref, tone: "text-blue-700 bg-blue-50 hover:bg-blue-100 focus-visible:outline-blue-700" },
+            { kind: "line" as const, label: copy.actions.line, href: lineUrl, tone: "text-[#06c755] bg-green-50 hover:bg-green-100 focus-visible:outline-[#06c755]" },
+            { kind: "whatsapp" as const, label: copy.actions.whatsapp, href: whatsappUrl, tone: "text-[#25d366] bg-emerald-50 hover:bg-emerald-100 focus-visible:outline-[#25d366]" },
+            { kind: "map" as const, label: copy.actions.map, href: branch.mapUrl, tone: "bg-cyan-50 hover:bg-cyan-100 focus-visible:outline-cyan-700" },
+          ].map((action) => <a key={action.kind} href={action.href} target={action.href.startsWith("tel:") ? undefined : "_blank"} rel={action.href.startsWith("tel:") ? undefined : "noopener noreferrer"} aria-label={action.label} title={action.label} className={`inline-flex min-h-16 items-center justify-center rounded-2xl p-4 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${action.tone}`}><PlatformIcon kind={action.kind} /><span className="sr-only">{action.label}</span></a>)}
         </div>
       </section>
 
