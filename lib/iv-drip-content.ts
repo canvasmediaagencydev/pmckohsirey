@@ -11,7 +11,7 @@ type Copy = {
   contactIcons: { line: string; phone: string; whatsapp: string; map: string };
   overview: { eyebrow: string; title: string; body: string; note: string };
   questions: { eyebrow: string; title: string; items: readonly { title: string; body: string }[] };
-  visit: { eyebrow: string; title: string; body: string; items: readonly { number: string; title: string; body: string }[] };
+  visit: { eyebrow: string; title: string; body: string; items: readonly { icon: "fluid" | "vitamin" | "mineral"; title: string; body: string }[] };
   safety: { eyebrow: string; title: string; body: string; items: readonly string[] };
   faq: { eyebrow: string; title: string; items: readonly { question: string; answer: string }[] };
   location: { eyebrow: string; title: string; hoursTitle: string; addressTitle: string };
@@ -34,10 +34,10 @@ export const ivDripCopy: Record<IvDripLocale, Copy> = {
       { title: "ระยะเวลาไม่ตายตัว", body: "ระยะเวลาของแต่ละบริการขึ้นกับรายการที่เลือกและข้อมูลของผู้รับบริการ โปรดสอบถามเวลาประมาณการกับคลินิกก่อนนัด" },
       { title: "ความถี่ต้องประเมินเป็นรายบุคคล", body: "ไม่มีตารางความถี่เดียวที่เหมาะกับทุกคน ผู้ให้บริการทางการแพทย์จะพิจารณาตามข้อมูลและความเหมาะสม" },
     ] },
-    visit: { eyebrow: "ส่วนประกอบ", title: "สิ่งที่อาจพบใน IV Drip", body: "รายการที่ใช้จริงไม่ได้เหมือนกันทุกบริการ และไม่ได้หมายความว่าจะมีครบทุกกลุ่มด้านล่าง โปรดยืนยันส่วนผสมที่มีให้บริการกับทีมคลินิกก่อนเข้ารับบริการ", items: [
-      { number: "01", title: "สารน้ำ", body: "ใช้เป็นส่วนหนึ่งของการให้บริการผ่านทางหลอดเลือดดำ" },
-      { number: "02", title: "วิตามิน", body: "บางรายการอาจมีวิตามินตามที่ผู้ให้บริการทางการแพทย์พิจารณา" },
-      { number: "03", title: "แร่ธาตุและสารอาหารอื่น", body: "การมีหรือไม่มีส่วนประกอบแต่ละชนิดขึ้นกับรายการและการประเมินรายบุคคล" },
+    visit: { eyebrow: "ใน IV Drip มีอะไรบ้าง?", title: "องค์ประกอบที่อาจมีในบริการ", body: "แต่ละรายการมีส่วนผสมไม่เหมือนกัน ทีมคลินิกจะแจ้งรายการที่มีให้บริการและส่วนผสมที่เกี่ยวข้องก่อนเข้ารับบริการ", items: [
+      { icon: "fluid", title: "สารน้ำ", body: "ใช้ตามรายละเอียดของรายการบริการ" },
+      { icon: "vitamin", title: "วิตามิน", body: "บางรายการอาจมีวิตามินตามความเหมาะสม" },
+      { icon: "mineral", title: "แร่ธาตุและสารอาหารอื่น", body: "ขึ้นกับรายการที่มีและการประเมินรายบุคคล" },
     ] },
     safety: { eyebrow: "ข้อมูลสำคัญ", title: "ข้อมูลที่ต้องแจ้งทีมคลินิก", body: "ข้อมูลเหล่านี้ไม่จำเป็นต้องหมายความว่าไม่สามารถรับบริการได้ แต่ควรแจ้งทีมคลินิกก่อน เพื่อให้ผู้ให้บริการทางการแพทย์พิจารณาอย่างเหมาะสม", items: ["กำลังตั้งครรภ์หรือให้นมบุตร", "โรคไต โรคหัวใจ หรือภาวะพร่องเอนไซม์ G6PD", "ยาต้านเกล็ดเลือด ยาที่ใช้อยู่ หรืออาหารเสริม", "ประวัติการแพ้และข้อมูลสุขภาพที่เกี่ยวข้อง"] },
     faq: { eyebrow: "คำถามที่พบบ่อย", title: "ก่อนนัดหมาย", items: [
@@ -63,10 +63,10 @@ export const ivDripCopy: Record<IvDripLocale, Copy> = {
       { title: "ကြာချိန် မတူနိုင်ပါ", body: "ကြာချိန်သည် ရွေးချယ်သည့်ဝန်ဆောင်မှုနှင့် တစ်ဦးချင်းအချက်အလက်အပေါ် မူတည်ပါသည်။ ချိန်းဆိုမီ ခန့်မှန်းချိန်ကို မေးမြန်းပါ" },
       { title: "အကြိမ်ရေကို တစ်ဦးချင်းစီ စဉ်းစားပါသည်", body: "လူတိုင်းအတွက် တူညီသည့်အချိန်ဇယားမရှိပါ။ ဆေးဘက်ဆိုင်ရာ ဝန်ဆောင်မှုပေးသူက အချက်အလက်အလိုက် စဉ်းစားပါသည်" },
     ] },
-    visit: { eyebrow: "ပါဝင်ပစ္စည်းများ", title: "IV Drip တွင် ပါနိုင်သောအရာများ", body: "အောက်ပါအုပ်စုအားလုံးသည် ဝန်ဆောင်မှုတိုင်းတွင် မပါဝင်နိုင်ပါ။ အမှန်တကယ်ရရှိနိုင်သော ပါဝင်ပစ္စည်းများကို ဆေးခန်းအဖွဲ့နှင့် အတည်ပြုပါ။", items: [
-      { number: "01", title: "အရည်", body: "သွေးကြောမှတစ်ဆင့် ဝန်ဆောင်မှုပေးရာတွင် အသုံးပြုနိုင်ပါသည်" },
-      { number: "02", title: "ဗီတာမင်များ", body: "အချို့ဝန်ဆောင်မှုများတွင် ဆေးဘက်ဆိုင်ရာ စဉ်းစားမှုအရ ပါဝင်နိုင်ပါသည်" },
-      { number: "03", title: "သတ္တုဓာတ်နှင့် အခြားအာဟာရ", body: "ပါဝင်/မပါဝင်သည်မှာ စာရင်းနှင့် တစ်ဦးချင်း အကဲဖြတ်မှုအပေါ် မူတည်ပါသည်" },
+    visit: { eyebrow: "IV Drip မှာ ဘာတွေပါနိုင်သလဲ?", title: "ဝန်ဆောင်မှုတွင် ပါနိုင်သော အစိတ်အပိုင်းများ", body: "ဝန်ဆောင်မှုတစ်ခုစီ၏ ပါဝင်ပစ္စည်း မတူနိုင်ပါ။ ဆေးခန်းအဖွဲ့က ရရှိနိုင်သောစာရင်းနှင့် သက်ဆိုင်ရာ ပါဝင်ပစ္စည်းများကို လာရောက်မီ အသိပေးပါမည်", items: [
+      { icon: "fluid", title: "အရည်", body: "ဝန်ဆောင်မှုအသေးစိတ်အလိုက် အသုံးပြုနိုင်ပါသည်" },
+      { icon: "vitamin", title: "ဗီတာမင်", body: "အချို့ဝန်ဆောင်မှုများတွင် သင့်လျော်မှုအရ ပါဝင်နိုင်ပါသည်" },
+      { icon: "mineral", title: "သတ္တုဓာတ်နှင့် အခြားအာဟာရ", body: "ရရှိနိုင်သောစာရင်းနှင့် တစ်ဦးချင်း အကဲဖြတ်မှုအပေါ် မူတည်ပါသည်" },
     ] },
     safety: { eyebrow: "အရေးကြီးအချက်အလက်", title: "ဆေးခန်းအဖွဲ့ထံ အသိပေးရမည့်အချက်များ", body: "ဤအချက်များသည် ဝန်ဆောင်မှုမရနိုင်ဟု မဆိုလိုပါ။ သင့်လျော်စွာ စဉ်းစားနိုင်ရန် ဆေးခန်းအဖွဲ့ထံ ကြိုတင်အသိပေးပါ", items: ["ကိုယ်ဝန်ဆောင်နေခြင်း သို့မဟုတ် နို့တိုက်နေခြင်း", "ကျောက်ကပ်ရောဂါ၊ နှလုံးရောဂါ သို့မဟုတ် G6PD ချို့တဲ့မှု", "သွေးခဲတားဆေး၊ လက်ရှိသောက်သုံးနေသောဆေး သို့မဟုတ် ဖြည့်စွက်စာ", "ဓာတ်မတည့်မှုနှင့် သက်ဆိုင်ရာ ကျန်းမာရေးမှတ်တမ်း"] },
     faq: { eyebrow: "မေးလေ့ရှိသော မေးခွန်းများ", title: "မချိန်းဆိုမီ", items: [
@@ -92,10 +92,10 @@ export const ivDripCopy: Record<IvDripLocale, Copy> = {
       { title: "Timing can vary", body: "The duration depends on the selected service and individual information. Ask the clinic for an estimated time before booking." },
       { title: "Frequency is individual", body: "There is no single schedule for everyone. A medical provider considers frequency using individual information and suitability." },
     ] },
-    visit: { eyebrow: "What may be included", title: "Components that may be part of an IV Drip", body: "Not every service includes every group below. Please confirm the components currently available with the clinic team before your visit.", items: [
-      { number: "01", title: "Fluids", body: "May be used as part of a service delivered through a vein." },
-      { number: "02", title: "Vitamins", body: "Some services may include vitamins when considered appropriate by the medical provider." },
-      { number: "03", title: "Minerals and other nutrients", body: "Whether an ingredient is included depends on the available list and individual assessment." },
+    visit: { eyebrow: "What can be in an IV Drip?", title: "Components that may be included", body: "Each service can have different ingredients. The clinic team can explain the currently available service list and relevant ingredients before your visit.", items: [
+      { icon: "fluid", title: "Fluids", body: "May be used according to the details of the service." },
+      { icon: "vitamin", title: "Vitamins", body: "Some services may include vitamins when appropriate." },
+      { icon: "mineral", title: "Minerals and other nutrients", body: "Depends on the available list and individual assessment." },
     ] },
     safety: { eyebrow: "Important information", title: "Information to share with the clinic team", body: "These points do not necessarily mean a service cannot be provided. Please tell the clinic team first so a medical provider can consider them appropriately.", items: ["Pregnancy or breastfeeding", "Kidney disease, heart disease, or G6PD deficiency", "Antiplatelet medicines, current medicines, or supplements", "Allergies and relevant health history"] },
     faq: { eyebrow: "Frequently asked questions", title: "Before booking", items: [
