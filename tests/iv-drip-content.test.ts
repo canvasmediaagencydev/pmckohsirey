@@ -19,7 +19,8 @@ describe("IV Drip campaign content", () => {
       const copy = ivDripCopy[locale];
       expect(copy.hero.title).toBeTruthy();
       expect(copy.hero.body).toContain(copy.assessmentPhrase);
-      expect(copy.safety.items).toHaveLength(3);
+      expect(copy.safety.items).toHaveLength(4);
+      expect(copy.visit.body).toBeTruthy();
       expect(copy.faq.items).toHaveLength(3);
       expect(copy.contactIcons).toMatchObject({ line: expect.any(String), phone: expect.any(String), whatsapp: expect.any(String), map: expect.any(String) });
       expect(copy.disclaimer).toBeTruthy();

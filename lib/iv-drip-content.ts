@@ -11,7 +11,7 @@ type Copy = {
   contactIcons: { line: string; phone: string; whatsapp: string; map: string };
   overview: { eyebrow: string; title: string; body: string; note: string };
   questions: { eyebrow: string; title: string; items: readonly { title: string; body: string }[] };
-  visit: { eyebrow: string; title: string; items: readonly { number: string; title: string; body: string }[] };
+  visit: { eyebrow: string; title: string; body: string; items: readonly { number: string; title: string; body: string }[] };
   safety: { eyebrow: string; title: string; body: string; items: readonly string[] };
   faq: { eyebrow: string; title: string; items: readonly { question: string; answer: string }[] };
   location: { eyebrow: string; title: string; hoursTitle: string; addressTitle: string };
@@ -23,23 +23,23 @@ type Copy = {
 export const ivDripCopy: Record<IvDripLocale, Copy> = {
   th: {
     languageLabel: "ภาษา",
-    nav: { overview: "ข้อมูลบริการ", questions: "ก่อนตัดสินใจ", visit: "ขั้นตอน", location: "แผนที่", contact: "ติดต่อ" },
+    nav: { overview: "ข้อมูล IV Drip", questions: "IV Drip คืออะไร", visit: "ส่วนประกอบ", location: "แผนที่", contact: "ติดต่อ" },
     hero: { eyebrow: "PMC Koh Sirey · Phuket", title: "IV Drip ที่ PMC Koh Sirey", body: "นัดเวลาเข้ามาคุยกับทีมคลินิกได้ก่อน การประเมินความเหมาะสมจะทำที่คลินิกก่อนรับบริการ", openingHours: "เปิดทุกวัน 09:00–20:00 น.", location: "เกาะสิเหร่ · เมืองภูเก็ต" },
     assessmentPhrase: "การประเมินความเหมาะสม",
     actions: { line: "LINE", call: "โทร", whatsapp: "WhatsApp", map: "แผนที่" },
     contactIcons: { line: "สอบถามผ่าน LINE", phone: "โทรหา PMC Koh Sirey", whatsapp: "แชต WhatsApp", map: "เปิดตำแหน่งใน Google Maps" },
-    overview: { eyebrow: "IV Drip information", title: "รับข้อมูลก่อน แล้วค่อยตัดสินใจ", body: "IV drip เป็นบริการที่ให้สารผ่านทางหลอดเลือดดำ รายละเอียดและความเหมาะสมของบริการอาจไม่เหมือนกันในแต่ละคน จึงควรเข้ามารับข้อมูลที่คลินิกก่อน", note: "หน้านี้ให้ข้อมูลทั่วไป ไม่ใช่คำวินิจฉัยหรือคำแนะนำเฉพาะบุคคล" },
-    questions: { eyebrow: "ก่อนตัดสินใจ", title: "เรื่องที่ควรถามทีมคลินิก", items: [
-      { title: "บริการนี้เหมาะกับสิ่งที่คุณต้องการหรือไม่", body: "เล่าข้อมูลที่เกี่ยวข้องให้ทีมคลินิกทราบ เพื่อรับคำแนะนำที่เหมาะกับคุณ" },
-      { title: "วันเข้ารับบริการมีขั้นตอนอย่างไร", body: "สอบถามระยะเวลา ขั้นตอน และสิ่งที่ควรเตรียมก่อนนัดหมาย" },
-      { title: "มีข้อควรระวังอะไรบ้าง", body: "ถามให้ชัดถึงสิ่งที่ควรแจ้ง ข้อควรระวัง และสิ่งที่ควรสังเกต" },
+    overview: { eyebrow: "IV Drip information", title: "IV Drip / Intravenous Vitamin Therapy คืออะไร?", body: "IV Drip หรือ Intravenous Vitamin Therapy คือการให้สารน้ำ วิตามิน แร่ธาตุ หรือสารอาหารอื่นผ่านสายน้ำเกลือเข้าสู่หลอดเลือดดำโดยตรง ส่วนผสมและปริมาณที่ใช้จะพิจารณาตามข้อมูลของแต่ละบุคคลและรายการที่คลินิกมีให้บริการในวันนั้น", note: "การให้ผ่านทางหลอดเลือดดำต่างจากการรับประทาน แต่ไม่ได้ยืนยันผลลัพธ์หรือความเหมาะสมสำหรับทุกคน" },
+    questions: { eyebrow: "IV Drip information", title: "ข้อมูลที่ควรรู้ก่อนสอบถามบริการ", items: [
+      { title: "ให้ผ่านทางหลอดเลือดดำ", body: "IV Drip ให้สารเข้าสู่หลอดเลือดดำโดยตรง จึงไม่ผ่านกระบวนการย่อยเหมือนการรับประทาน" },
+      { title: "ระยะเวลาไม่ตายตัว", body: "ระยะเวลาของแต่ละบริการขึ้นกับรายการที่เลือกและข้อมูลของผู้รับบริการ โปรดสอบถามเวลาประมาณการกับคลินิกก่อนนัด" },
+      { title: "ความถี่ต้องประเมินเป็นรายบุคคล", body: "ไม่มีตารางความถี่เดียวที่เหมาะกับทุกคน ผู้ให้บริการทางการแพทย์จะพิจารณาตามข้อมูลและความเหมาะสม" },
     ] },
-    visit: { eyebrow: "ขั้นตอน", title: "เมื่อมาถึงคลินิก", items: [
-      { number: "01", title: "เลือกเวลา", body: "ติดต่อทีมคลินิกเพื่อสอบถามคิวและเวลาที่สะดวก" },
-      { number: "02", title: "พูดคุยและประเมิน", body: "แจ้งข้อมูลสุขภาพที่เกี่ยวข้องกับผู้ให้บริการทางการแพทย์" },
-      { number: "03", title: "รับข้อมูลก่อนตัดสินใจ", body: "ทีมคลินิกอธิบายข้อมูลที่เกี่ยวข้องก่อนดำเนินการ" },
+    visit: { eyebrow: "ส่วนประกอบ", title: "สิ่งที่อาจพบใน IV Drip", body: "รายการที่ใช้จริงไม่ได้เหมือนกันทุกบริการ และไม่ได้หมายความว่าจะมีครบทุกกลุ่มด้านล่าง โปรดยืนยันส่วนผสมที่มีให้บริการกับทีมคลินิกก่อนเข้ารับบริการ", items: [
+      { number: "01", title: "สารน้ำ", body: "ใช้เป็นส่วนหนึ่งของการให้บริการผ่านทางหลอดเลือดดำ" },
+      { number: "02", title: "วิตามิน", body: "บางรายการอาจมีวิตามินตามที่ผู้ให้บริการทางการแพทย์พิจารณา" },
+      { number: "03", title: "แร่ธาตุและสารอาหารอื่น", body: "การมีหรือไม่มีส่วนประกอบแต่ละชนิดขึ้นกับรายการและการประเมินรายบุคคล" },
     ] },
-    safety: { eyebrow: "ข้อมูลสำคัญ", title: "เตรียมข้อมูลไว้คุยกับทีมคลินิก", body: "รายละเอียดที่ครบถ้วนช่วยให้ผู้ให้บริการทางการแพทย์พิจารณาได้เหมาะสมขึ้น", items: ["ยาหรืออาหารเสริมที่ใช้อยู่", "ประวัติการแพ้ หรือข้อมูลสุขภาพที่เกี่ยวข้อง", "คำถามเรื่องขั้นตอน ข้อควรระวัง และค่าใช้จ่าย"] },
+    safety: { eyebrow: "ข้อมูลสำคัญ", title: "ข้อมูลที่ต้องแจ้งทีมคลินิก", body: "ข้อมูลเหล่านี้ไม่จำเป็นต้องหมายความว่าไม่สามารถรับบริการได้ แต่ควรแจ้งทีมคลินิกก่อน เพื่อให้ผู้ให้บริการทางการแพทย์พิจารณาอย่างเหมาะสม", items: ["กำลังตั้งครรภ์หรือให้นมบุตร", "โรคไต โรคหัวใจ หรือภาวะพร่องเอนไซม์ G6PD", "ยาต้านเกล็ดเลือด ยาที่ใช้อยู่ หรืออาหารเสริม", "ประวัติการแพ้และข้อมูลสุขภาพที่เกี่ยวข้อง"] },
     faq: { eyebrow: "คำถามที่พบบ่อย", title: "ก่อนนัดหมาย", items: [
       { question: "ต้องนัดหมายล่วงหน้าหรือไม่?", answer: "แนะนำให้ติดต่อทีมคลินิกก่อน เพื่อสอบถามคิวและเวลาเข้ารับบริการ" },
       { question: "ควรเตรียมอะไรมา?", answer: "เตรียมรายการยา อาหารเสริม และข้อมูลสุขภาพที่เกี่ยวข้องเพื่อคุยกับทีมที่คลินิก" },
@@ -47,28 +47,28 @@ export const ivDripCopy: Record<IvDripLocale, Copy> = {
     ] },
     location: { eyebrow: "ที่ตั้งและเวลาเปิด", title: "PMC Koh Sirey", hoursTitle: "เปิดทุกวัน", addressTitle: "ที่อยู่" },
     contact: { eyebrow: "ติดต่อเรา", title: "เลือกช่องทางที่สะดวก", body: "สอบถามข้อมูลบริการ เวลาเปิด หรือจองเวลามาคุยกับทีมคลินิก" },
-    disclaimer: "บริการและขั้นตอนขึ้นอยู่กับการประเมินเป็นรายบุคคล โปรดรับคำแนะนำจากผู้ให้บริการทางการแพทย์ที่คลินิกก่อนตัดสินใจ",
+    disclaimer: "การให้บริการและรายละเอียดขึ้นอยู่กับการประเมินเป็นรายบุคคล โปรดรับคำแนะนำจากผู้ให้บริการทางการแพทย์ที่คลินิกก่อนรับบริการ",
     footer: { home: "หน้าแรก", privacy: "นโยบายความเป็นส่วนตัว", terms: "ข้อกำหนดและเงื่อนไข", rights: "สงวนลิขสิทธิ์" },
   },
   my: {
     languageLabel: "ဘာသာစကား",
-    nav: { overview: "ဝန်ဆောင်မှုအချက်အလက်", questions: "မဆုံးဖြတ်မီ", visit: "အဆင့်များ", location: "မြေပုံ", contact: "ဆက်သွယ်ရန်" },
+    nav: { overview: "IV Drip အချက်အလက်", questions: "IV Drip ဆိုတာဘာလဲ", visit: "ပါဝင်ပစ္စည်းများ", location: "မြေပုံ", contact: "ဆက်သွယ်ရန်" },
     hero: { eyebrow: "PMC Koh Sirey · Phuket", title: "PMC Koh Sirey ရှိ IV Drip", body: "ချိန်းဆိုရန် ဆေးခန်းအဖွဲ့ကို အရင်ဆက်သွယ်နိုင်ပါသည်။ ဝန်ဆောင်မှုမပေးမီ သင့်လျော်မှုကို ဆေးခန်းတွင် အကဲဖြတ်ပါမည်", openingHours: "နေ့စဉ် 09:00–20:00 ဖွင့်ပါသည်", location: "Koh Sirey · Phuket" },
     assessmentPhrase: "သင့်လျော်မှုကို ဆေးခန်းတွင် အကဲဖြတ်",
     actions: { line: "LINE", call: "ဖုန်း", whatsapp: "WhatsApp", map: "မြေပုံ" },
     contactIcons: { line: "LINE မှ မေးမြန်းရန်", phone: "PMC Koh Sirey ကို ဖုန်းခေါ်ရန်", whatsapp: "WhatsApp မှ စာပို့ရန်", map: "Google Maps တွင် တည်နေရာဖွင့်ရန်" },
-    overview: { eyebrow: "IV Drip information", title: "အချက်အလက်ရယူပြီးမှ ဆုံးဖြတ်ပါ", body: "IV drip သည် သွေးကြောမှတစ်ဆင့် အရည်ပေးသည့် ဝန်ဆောင်မှုဖြစ်သည်။ ဝန်ဆောင်မှုအသေးစိတ်နှင့် သင့်လျော်မှုသည် တစ်ဦးချင်းစီအလိုက် ကွာခြားနိုင်သောကြောင့် ဆေးခန်းတွင် အချက်အလက်ရယူပါ။", note: "ဤစာမျက်နှာသည် အထွေထွေအချက်အလက်အတွက်သာ ဖြစ်သည်" },
-    questions: { eyebrow: "မဆုံးဖြတ်မီ", title: "ဆေးခန်းအဖွဲ့ကို မေးသင့်သောအချက်များ", items: [
-      { title: "ဤဝန်ဆောင်မှုသည် သင့်အတွက် သင့်လျော်ပါသလား", body: "သက်ဆိုင်ရာအချက်အလက်ကို ဆေးခန်းအဖွဲ့ထံ မျှဝေပြီး အကြံပြုချက်ရယူပါ" },
-      { title: "လာရောက်သည့်နေ့တွင် ဘာလုပ်ရမလဲ", body: "ကြာချိန်၊ အဆင့်များနှင့် ကြိုတင်ပြင်ဆင်ရမည့်အရာများကို မေးမြန်းပါ" },
-      { title: "ဘာကို သတိထားသင့်သလဲ", body: "ပြောပြရမည့်အချက်များ၊ သတိပြုရန်အရာများကို ရှင်းလင်းစွာ မေးမြန်းပါ" },
+    overview: { eyebrow: "IV Drip information", title: "IV Drip / Intravenous Vitamin Therapy ဆိုတာဘာလဲ?", body: "IV Drip သို့မဟုတ် Intravenous Vitamin Therapy သည် အရည်၊ ဗီတာမင်၊ သတ္တုဓာတ် သို့မဟုတ် အခြားအာဟာရများကို IV လိုင်းမှတစ်ဆင့် သွေးကြောထဲသို့ ပေးသည့် ဝန်ဆောင်မှုဖြစ်သည်။ ပါဝင်ပစ္စည်းနှင့် ပမာဏကို တစ်ဦးချင်းအချက်အလက်နှင့် ထိုနေ့ ဆေးခန်းတွင် ရရှိနိုင်သောစာရင်းပေါ်မူတည်၍ စဉ်းစားပါသည်။", note: "သွေးကြောမှတစ်ဆင့် ပေးခြင်းသည် သောက်သုံးခြင်းနှင့် ကွာခြားသော်လည်း လူတိုင်းအတွက် ရလဒ် သို့မဟုတ် သင့်လျော်မှုကို အတည်မပြုပါ" },
+    questions: { eyebrow: "IV Drip information", title: "ဝန်ဆောင်မှုမေးမြန်းမီ သိထားသင့်သောအချက်များ", items: [
+      { title: "သွေးကြောမှတစ်ဆင့် ပေးခြင်း", body: "IV Drip သည် အရည်ကို သွေးကြောထဲသို့ တိုက်ရိုက်ပေးသဖြင့် အစာချေမှုလုပ်ငန်းစဉ်ကို မဖြတ်သန်းပါ" },
+      { title: "ကြာချိန် မတူနိုင်ပါ", body: "ကြာချိန်သည် ရွေးချယ်သည့်ဝန်ဆောင်မှုနှင့် တစ်ဦးချင်းအချက်အလက်အပေါ် မူတည်ပါသည်။ ချိန်းဆိုမီ ခန့်မှန်းချိန်ကို မေးမြန်းပါ" },
+      { title: "အကြိမ်ရေကို တစ်ဦးချင်းစီ စဉ်းစားပါသည်", body: "လူတိုင်းအတွက် တူညီသည့်အချိန်ဇယားမရှိပါ။ ဆေးဘက်ဆိုင်ရာ ဝန်ဆောင်မှုပေးသူက အချက်အလက်အလိုက် စဉ်းစားပါသည်" },
     ] },
-    visit: { eyebrow: "အဆင့်များ", title: "ဆေးခန်းသို့ရောက်သောအခါ", items: [
-      { number: "01", title: "အချိန်ရွေးပါ", body: "အဆင်ပြေသော အချိန်နှင့် ချိန်းဆိုမှုအတွက် ဆေးခန်းကို ဆက်သွယ်ပါ" },
-      { number: "02", title: "ဆွေးနွေးပြီး အကဲဖြတ်ပါ", body: "သက်ဆိုင်ရာ ကျန်းမာရေးအချက်အလက်ကို ဆေးဘက်ဆိုင်ရာ ဝန်ဆောင်မှုပေးသူနှင့် ဆွေးနွေးပါ" },
-      { number: "03", title: "အချက်အလက်ရယူပါ", body: "ဆုံးဖြတ်မီ သက်ဆိုင်ရာ အချက်အလက်ကို ဆေးခန်းအဖွဲ့က ရှင်းပြပါမည်" },
+    visit: { eyebrow: "ပါဝင်ပစ္စည်းများ", title: "IV Drip တွင် ပါနိုင်သောအရာများ", body: "အောက်ပါအုပ်စုအားလုံးသည် ဝန်ဆောင်မှုတိုင်းတွင် မပါဝင်နိုင်ပါ။ အမှန်တကယ်ရရှိနိုင်သော ပါဝင်ပစ္စည်းများကို ဆေးခန်းအဖွဲ့နှင့် အတည်ပြုပါ။", items: [
+      { number: "01", title: "အရည်", body: "သွေးကြောမှတစ်ဆင့် ဝန်ဆောင်မှုပေးရာတွင် အသုံးပြုနိုင်ပါသည်" },
+      { number: "02", title: "ဗီတာမင်များ", body: "အချို့ဝန်ဆောင်မှုများတွင် ဆေးဘက်ဆိုင်ရာ စဉ်းစားမှုအရ ပါဝင်နိုင်ပါသည်" },
+      { number: "03", title: "သတ္တုဓာတ်နှင့် အခြားအာဟာရ", body: "ပါဝင်/မပါဝင်သည်မှာ စာရင်းနှင့် တစ်ဦးချင်း အကဲဖြတ်မှုအပေါ် မူတည်ပါသည်" },
     ] },
-    safety: { eyebrow: "အရေးကြီးအချက်အလက်", title: "ဆေးခန်းအဖွဲ့နှင့် ဆွေးနွေးရန် ပြင်ဆင်ပါ", body: "အချက်အလက်ပြည့်စုံမှုက သင့်လျော်သော စဉ်းစားမှုကို ကူညီပေးပါသည်", items: ["သောက်သုံးနေသော ဆေး သို့မဟုတ် ဖြည့်စွက်စာ", "ဓာတ်မတည့်မှုနှင့် သက်ဆိုင်ရာ ကျန်းမာရေးမှတ်တမ်း", "အဆင့်များ၊ သတိပြုရန်အရာများနှင့် ကုန်ကျစရိတ်အကြောင်း မေးခွန်းများ"] },
+    safety: { eyebrow: "အရေးကြီးအချက်အလက်", title: "ဆေးခန်းအဖွဲ့ထံ အသိပေးရမည့်အချက်များ", body: "ဤအချက်များသည် ဝန်ဆောင်မှုမရနိုင်ဟု မဆိုလိုပါ။ သင့်လျော်စွာ စဉ်းစားနိုင်ရန် ဆေးခန်းအဖွဲ့ထံ ကြိုတင်အသိပေးပါ", items: ["ကိုယ်ဝန်ဆောင်နေခြင်း သို့မဟုတ် နို့တိုက်နေခြင်း", "ကျောက်ကပ်ရောဂါ၊ နှလုံးရောဂါ သို့မဟုတ် G6PD ချို့တဲ့မှု", "သွေးခဲတားဆေး၊ လက်ရှိသောက်သုံးနေသောဆေး သို့မဟုတ် ဖြည့်စွက်စာ", "ဓာတ်မတည့်မှုနှင့် သက်ဆိုင်ရာ ကျန်းမာရေးမှတ်တမ်း"] },
     faq: { eyebrow: "မေးလေ့ရှိသော မေးခွန်းများ", title: "မချိန်းဆိုမီ", items: [
       { question: "ကြိုတင်ချိန်းဆိုရန် လိုအပ်ပါသလား?", answer: "အချိန်စာရင်းအတွက် ဆေးခန်းအဖွဲ့ကို ကြိုတင်ဆက်သွယ်ရန် အကြံပြုပါသည်" },
       { question: "ဘာတွေ ယူလာသင့်သလဲ?", answer: "ဆေး၊ ဖြည့်စွက်စာနှင့် သက်ဆိုင်ရာ ကျန်းမာရေးအချက်အလက်များကို ယူလာပါ" },
@@ -81,23 +81,23 @@ export const ivDripCopy: Record<IvDripLocale, Copy> = {
   },
   en: {
     languageLabel: "Language",
-    nav: { overview: "Service information", questions: "Before deciding", visit: "Your visit", location: "Map", contact: "Contact" },
+    nav: { overview: "IV Drip information", questions: "What is IV Drip?", visit: "What may be included", location: "Map", contact: "Contact" },
     hero: { eyebrow: "PMC Koh Sirey · Phuket", title: "IV Drip at PMC Koh Sirey", body: "You can contact the clinic team before visiting. An individual assessment is completed at the clinic before service is provided.", openingHours: "Open daily, 9:00 AM–8:00 PM", location: "Koh Sirey · Phuket" },
     assessmentPhrase: "individual assessment",
     actions: { line: "LINE", call: "Call", whatsapp: "WhatsApp", map: "Map" },
     contactIcons: { line: "Ask on LINE", phone: "Call PMC Koh Sirey", whatsapp: "Message on WhatsApp", map: "Open location in Google Maps" },
-    overview: { eyebrow: "IV Drip information", title: "Get the information first", body: "IV drip is a service that delivers fluids through a vein. Details and suitability can vary between people, so please receive information at the clinic before deciding.", note: "This page provides general information only." },
-    questions: { eyebrow: "Before deciding", title: "Questions to ask the clinic team", items: [
-      { title: "Is this service suitable for you?", body: "Share relevant information with the clinic team and ask for guidance." },
-      { title: "What happens on the day?", body: "Ask about timing, the process, and anything to prepare before your appointment." },
-      { title: "What should you be aware of?", body: "Ask clearly about information to share and points to consider." },
+    overview: { eyebrow: "IV Drip information", title: "What is IV Drip / Intravenous Vitamin Therapy?", body: "IV Drip, or Intravenous Vitamin Therapy, delivers fluids, vitamins, minerals, or other nutrients through an IV line into a vein. Ingredients and amounts are considered using individual information and the service list available at the clinic on the day.", note: "Giving a service through a vein differs from taking something by mouth, but does not confirm an outcome or suitability for everyone." },
+    questions: { eyebrow: "IV Drip information", title: "Information to know before asking about the service", items: [
+      { title: "Given through a vein", body: "IV Drip delivers substances directly into a vein and does not use the digestive process in the same way as oral intake." },
+      { title: "Timing can vary", body: "The duration depends on the selected service and individual information. Ask the clinic for an estimated time before booking." },
+      { title: "Frequency is individual", body: "There is no single schedule for everyone. A medical provider considers frequency using individual information and suitability." },
     ] },
-    visit: { eyebrow: "Your visit", title: "When you arrive at the clinic", items: [
-      { number: "01", title: "Choose a time", body: "Contact the clinic to ask about a convenient appointment time." },
-      { number: "02", title: "Discuss and assess", body: "Discuss relevant health information with the medical provider." },
-      { number: "03", title: "Receive information", body: "The clinic team explains relevant information before you decide." },
+    visit: { eyebrow: "What may be included", title: "Components that may be part of an IV Drip", body: "Not every service includes every group below. Please confirm the components currently available with the clinic team before your visit.", items: [
+      { number: "01", title: "Fluids", body: "May be used as part of a service delivered through a vein." },
+      { number: "02", title: "Vitamins", body: "Some services may include vitamins when considered appropriate by the medical provider." },
+      { number: "03", title: "Minerals and other nutrients", body: "Whether an ingredient is included depends on the available list and individual assessment." },
     ] },
-    safety: { eyebrow: "Important information", title: "Prepare to speak with the clinic team", body: "Complete information helps the medical provider consider individual suitability.", items: ["Current medicines or supplements", "Allergies and relevant health history", "Questions about process, points to consider, and fees"] },
+    safety: { eyebrow: "Important information", title: "Information to share with the clinic team", body: "These points do not necessarily mean a service cannot be provided. Please tell the clinic team first so a medical provider can consider them appropriately.", items: ["Pregnancy or breastfeeding", "Kidney disease, heart disease, or G6PD deficiency", "Antiplatelet medicines, current medicines, or supplements", "Allergies and relevant health history"] },
     faq: { eyebrow: "Frequently asked questions", title: "Before booking", items: [
       { question: "Do I need an appointment?", answer: "Please contact the clinic first to ask about availability and a suitable visit time." },
       { question: "What should I bring?", answer: "Bring a list of medicines, supplements, and relevant health information to discuss at the clinic." },
